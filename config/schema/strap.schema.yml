@@ -1,0 +1,9 @@
+# Schema for the configuration files of the Strap theme.
+
+strap.settings:
+  type: theme_settings_default
+  label: 'Strap settings'
+
+strap.breakpoints:
+  type: theme_breakpoints_default
+  label: 'Strap breakpoints'
