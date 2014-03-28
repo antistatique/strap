@@ -1,0 +1,6 @@
+.sass-cache
+vendors
+node_modules
+
+assets/js/build/*
+assets/css/*

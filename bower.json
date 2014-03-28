@@ -1,0 +1,6 @@
+{
+  "name": "strap",
+  "dependencies": {
+    "bootstrap-sass": "3.*"
+  }
+}
