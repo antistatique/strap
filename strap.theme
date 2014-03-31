@@ -10,7 +10,7 @@ function strap_preprocess_html(&$variables) {
 }
 
 function strap_preprocess_page(&$variables) {
-  dpm($variables, 'strap_preprocess_page');
+  // dpm($variables, 'strap_preprocess_page');
 
   // Set the classes for bootstrap menu
   if (!empty($variables['main_menu'])) {
