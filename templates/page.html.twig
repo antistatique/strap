@@ -111,37 +111,46 @@
     <main role="main">
         <a id="main-content"></a>{# link is in html.html.twig #}
 
-        <div class="l-content">
-            {{ page.highlighted }}
+        <div class="row">
 
-            {{ title_prefix }}
-            {% if title %}
-                <h1>{{ title }}</h1>
+            <div class="l-content {% if page.sidebar_first or page.sidebar_second %}col-sm-8{% else %}col-sm-12{% endif %}">
+                {{ page.highlighted }}
+
+                {{ title_prefix }}
+                {% if title %}
+                    <h1>{{ title }}</h1>
+                {% endif %}
+                {{ title_suffix }}
+
+                {{ tabs }}
+
+                {% if action_links %}
+                    <nav class="action-links">{{ action_links }}</nav>
+                {% endif %}
+
+                {{ page.content }}
+
+                {{ feed_icons }}
+            </div>{# /.l-content #}
+            
+
+            {% if page.sidebar_first or page.sidebar_second %}
+                <aside class="col-sm-4" role="complementary">
+                    {% if page.sidebar_first %}
+                        <div class="l-sidebar-first">
+                            {{ page.sidebar_first }}
+                        </div>
+                    {% endif %}
+
+                    {% if page.sidebar_second %}
+                        <div class="l-sidebar-second">
+                            {{ page.sidebar_second }}
+                        </div>
+                    {% endif %}
+                </aside>
             {% endif %}
-            {{ title_suffix }}
 
-            {{ tabs }}
-
-            {% if action_links %}
-                <nav class="action-links">{{ action_links }}</nav>
-            {% endif %}
-
-            {{ page.content }}
-
-            {{ feed_icons }}
-        </div>{# /.l-content #}
-
-        {% if page.sidebar_first %}
-            <aside class="l-sidebar-first" role="complementary">
-                {{ page.sidebar_first }}
-            </aside>
-        {% endif %}
-
-        {% if page.sidebar_second %}
-            <aside class="l-sidebar-second" role="complementary">
-                {{ page.sidebar_second }}
-            </aside>
-        {% endif %}
+        </div>
 
     </main>
 

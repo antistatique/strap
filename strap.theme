@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Strap theme.
+ */
+
+function strap_preprocess_html(&$variables) {
+  //dpm($variables);
+}
+
+function strap_preprocess_page(&$variables) {
+  //dpm($variables, 'strap_preprocess_page');
+}
+
+
+function strap_preprocess_node(&$variables) {
+  //dpm($variables, 'strap_preprocess_node');
+}
