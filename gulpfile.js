@@ -51,7 +51,12 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('default', ['scripts', 'styles', 'watch', 'browser-sync']);
+gulp.task('default', ['scripts', 'styles', 'watch']);
+
+gulp.task('build', ['scripts', 'styles']);
+
+gulp.task('sync', ['scripts', 'styles', 'watch', 'browser-sync']);
+
 
 gulp.task('watch', function() {
   gulp.watch('./assets/sass/*.scss', ['styles']);
