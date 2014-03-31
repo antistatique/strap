@@ -10,10 +10,10 @@ function strap_preprocess_html(&$variables) {
 }
 
 function strap_preprocess_page(&$variables) {
-  dpm($variables, 'strap_preprocess_page');
+  //dpm($variables, 'strap_preprocess_page');
 }
 
 
 function strap_preprocess_node(&$variables) {
-  dpm($variables, 'strap_preprocess_node');
+  //dpm($variables, 'strap_preprocess_node');
 }
