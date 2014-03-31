@@ -63,7 +63,7 @@
  * @ingroup themeable
  */
 #}
-<div class="l-container">
+<div class="container">
 
     <header role="banner">
         {% if logo %}
@@ -128,7 +128,7 @@
 
         <div class="row">
 
-            <div class="l-content {% if page.sidebar_first or page.sidebar_second %}col-sm-8{% else %}col-sm-12{% endif %}">
+            <div class="content {% if page.sidebar_first or page.sidebar_second %}col-sm-8{% else %}col-sm-12{% endif %}">
                 {{ page.highlighted }}
 
                 {{ title_prefix }}
@@ -146,19 +146,19 @@
                 {{ page.content }}
 
                 {{ feed_icons }}
-            </div>{# /.l-content #}
+            </div>{# /.content #}
 
 
             {% if page.sidebar_first or page.sidebar_second %}
                 <aside class="col-sm-4" role="complementary">
                     {% if page.sidebar_first %}
-                        <div class="l-sidebar-first">
+                        <div class="sidebar-first">
                             {{ page.sidebar_first }}
                         </div>
                     {% endif %}
 
                     {% if page.sidebar_second %}
-                        <div class="l-sidebar-second">
+                        <div class="sidebar-second">
                             {{ page.sidebar_second }}
                         </div>
                     {% endif %}
@@ -175,4 +175,4 @@
         </footer>
     {% endif %}
 
-</div>{# /.l-container #}
+</div>{# /.container #}
