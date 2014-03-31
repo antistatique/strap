@@ -10,7 +10,15 @@ function strap_preprocess_html(&$variables) {
 }
 
 function strap_preprocess_page(&$variables) {
-  //dpm($variables, 'strap_preprocess_page');
+  dpm($variables, 'strap_preprocess_page');
+
+  // Set the classes for bootstrap menu
+  if (!empty($variables['main_menu'])) {
+    $variables['main_menu']['#attributes']['class'] = array('nav', 'navbar-nav');
+  }
+  if (!empty($variables['secondary_menu'])) {
+    $variables['secondary_menu']['#attributes']['class'] = array('nav', 'navbar-nav', 'navbar-right');
+  }
 }
 
 
